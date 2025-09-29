@@ -41,6 +41,7 @@ try:
     time.sleep(1)
 
     logging.info("Application opened in Brave with Selenium.")
+    logging.info("Login Page.")
 
     # Initialize MailSlurp client
     configuration = Configuration()
@@ -82,6 +83,7 @@ try:
     time.sleep(3)
 
     # Fill personal details
+    logging.info("Personal Details Page")
     first_name = wait.until(EC.visibility_of_element_located((By.NAME, "firstName")))
     first_name.send_keys(cfg.FIRST_NAME)
 
@@ -133,6 +135,7 @@ try:
     logging.info("Entered OTP and clicked Verify button.")
 
     # Provide agency details
+    logging.info("Agency Details Page")
     agency_name = wait.until(EC.presence_of_element_located((By.NAME, "agency_name")))
     agency_name.send_keys(cfg.AGENCY_NAME)
 
@@ -164,6 +167,7 @@ try:
     logging.info("Clicked on Next button.")
 
     # Enter professional experience details
+    logging.info("Professional Experience Page")
     experience_select = wait.until(EC.presence_of_element_located((By.TAG_NAME, "select")))
     select = Select(experience_select)
     select.select_by_visible_text(cfg.YEARS_OF_EXPERIENCE)
@@ -186,6 +190,7 @@ try:
     logging.info("Clicked on Next button.")
 
     # Enter business details and preferences
+    logging.info("Business Details and Preferences Page")
     reg_no = wait.until(EC.presence_of_element_located((By.NAME, "business_registration_number")))
     reg_no.send_keys(cfg.REG_NO)
 
@@ -212,6 +217,7 @@ try:
     submit_button.click()
 
     dashboard_element = wait.until(EC.visibility_of_element_located((By.XPATH, "//h2[contains(text(), 'My Profile')]")))
+    logging.info("My Profile Page")
     logging.info("Registration process completed.")
     time.sleep(1)
 except Exception as e:
