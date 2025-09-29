@@ -1,3 +1,6 @@
+'''
+Contains Brave and ChromeDriver paths along with test data for the automation script.
+'''
 import os
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
