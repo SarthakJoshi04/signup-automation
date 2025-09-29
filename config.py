@@ -11,7 +11,7 @@ CHROMEDRIVER_PATH = r"D:\chromedriver-win64/chromedriver.exe"
 # Personal details
 FIRST_NAME = "John"
 LAST_NAME = "Doe"
-PHONE_NUMBER = "9823246221"
+PHONE_NUMBER = "9823248221"
 PASSWORD = "Test@123"
 
 # Agency details
